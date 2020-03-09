@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+     <div class="row">
+         <% test.forEach(function(test) { %>
+         	<% var current = test.name; %>
+               <h2><%= test.name %></h2>
+               <button onclick="sendJSON()"><%= test.name %></button> 
+               <p><a href="http://159.203.118.48:3000/testcomback?classroom=<%=test.name%>"><%= test.name%></a></p>
+
+         <% }); %>
+     </div>
+
+     <button onclick="sendJSON()">Send JSON</button> 
+
+
+<script type="text/javascript">
+	
+
+	function sendJSON(){ 
+			var initData = <%-JSON.stringify(test)%>;
+			myVar = JSON.stringify(initData);
+			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+			xmlhttp.open("POST", "http://159.203.118.48:3000/testcomback");
+			xmlhttp.setRequestHeader("Content-Type", "application/json");
+			xmlhttp.send(myVar);
+		} 
+
+
+
+</script>
+</body>
+

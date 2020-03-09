@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Title Page-->
+    <title>Instructor Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link rel="shortcut icon" href="http://159.203.118.48:3000/users/" type="http://159.203.118.48:3000/static/images/icon/logoicon.ico"/>
+    <link href="http://159.203.118.48:3000/static/css/font-face.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="http://159.203.118.48:3000/static/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="http://159.203.118.48:3000/static/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="http://159.203.118.48:3000/static/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="http://159.203.118.48:3000/static/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block">
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="http://159.203.118.48:3000/">
+                            <img src="http://159.203.118.48:3000/static/images/icon/logo-white.png" alt="GEOBASS" />
+                        </a>
+                    </div>
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="http://159.203.118.48:3000/static/images/icon/avatar-01.png" alt="User" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#"><%= profileData.fname %> <%= profileData.lname %></a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="http://159.203.118.48:3000/static/images/icon/avatar-01.png" alt="User" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#"><%= profileData.fname %></a>
+                                            </h5>
+                                            <span class="email"><%= profileData.name %></span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href=" http://159.203.118.48:3000/users/logout">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- END HEADER DESKTOP-->
+
+                    <!-- HEADER MOBILE-->
+                    <header class="header-mobile header-mobile-2 d-block d-lg-none">
+                        <div class="header-mobile__bar">
+                            <div class="container-fluid">
+                                <div class="header-mobile-inner">
+                                    <a class="logo" href="index.html">
+                                     <img src="http://159.203.118.48:3000/static/images/icon/logo-white.png" alt="GEOBASS" />
+                                 </a>
+                                 <button class="hamburger hamburger--slider" type="button">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="sub-header-mobile-2 d-block d-lg-none">
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="http://159.203.118.48:3000/static/images/icon/avatar-01.png" alt="User" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#"><%= profileData.fname %> </a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                           <img src="http://159.203.118.48:3000/static/images/icon/avatar-01.png" alt="User" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#"><%= profileData.fname %> <%= profileData.lname %></a>
+                                            </h5>
+                                            <span class="email"><%= profileData.name %> </span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="http://159.203.118.48:3000/users/logout">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END HEADER MOBILE -->
+
+                            <!-- PAGE CONTENT-->
+                            <div class="page-content--bgf7">
+                                <!-- BREADCRUMB-->
+                                <section class="au-breadcrumb2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="au-breadcrumb-content">
+                                                    <div class="au-breadcrumb-left">
+                                                        <span class="au-breadcrumb-span">You are here:</span>
+                                                        <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                                            <li class="list-inline-item active">
+                                                                <a href="http://159.203.118.48:3000/users/dashboard">Home</a>
+                                                            </li>
+                                                            <li class="list-inline-item seprate">
+                                                                <span>/</span>
+                                                            </li>
+                                                            <li class="list-inline-item">Dashboard
+                                                                <span>/</span>
+                                                            </li>
+                                                            <li class="list-inline-item"><%= classroom.classroomname %>
+                                                                <span>/</span>
+                                                            </li>
+                                                            <li class="list-inline-item"> <%= assignment.name %></li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- END BREADCRUMB-->
+
+                                <!-- WELCOME-->
+                                <section class="welcome p-t-10">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1 class="title-4"><%= assignment.name %>
+                                                </h1>
+                                                <hr class="line-seprate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- END WELCOME-->
+
+                                
+
+                                <!-- STATISTIC-->
+                                <section class="statistic statistic2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                <strong>Assignment Details</strong>
+                                                    
+                                                </div>
+                                                <div class="card-body card-block">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="textarea-input" class=" form-control-label">Instructions:</label>
+                                                            <span class="help-block"><%= assignment.instructions %></span>
+                                                        </div>
+
+                                                        <% pairs.forEach(function(pairs) { %>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputName2" class=" form-control-label"><%=pairs.question %></label> 
+                                                                <span class="badge badge-pill badge-secondary" style= "align-self: right; ">Points: 1</span>
+                                                                <input type="text" id="disabled-input" name="questions" placeholder="<%=pairs.answer%>" value="<%=pairs.answer%>" disabled="" class="form-control">
+                                                            </div>
+                                            <% }); %>
+
+                                                    </form>         
+                                                </div> 
+                                            </div>
+                                        </div>
+
+                                            <div class="col-md-6">
+<!--                                             <h3 class="title-5 m-b-35">Student Submissions</h3>
+ -->                                        <!--     <div class="table-data__tool">
+                                            <div class="table-data__tool-left">
+                                            <div class="rs-select2--light rs-select2--md">
+                                            <select class="js-select2" name="property">
+                                            <option selected="selected">All Students</option>
+                                            <option value="">Have Submitted</option>
+                                            <option value="">Have Not Submitted</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                            </div>
+                                            
+                                            <button class="au-btn-filter">
+                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
+                                            </div>
+                                            <div class="table-data__tool-right">
+                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            <i class="zmdi zmdi-plus"></i>add student</button>
+                                            <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                            <select class="js-select2" name="type">
+                                            <option selected="selected">Export</option>
+                                            <option value="">Option 1</option>
+                                            <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                            </div>
+                                            </div>
+                                            </div> -->
+                                            <div class="table-responsive table-responsive-data2">
+                                            <table class="table table-data3">
+                                            <thead>
+                                            <tr>
+                                           <!--  <th>
+                                            
+                                            </th> -->
+                                            <th>Student</th>
+                                            <th>Status</th>
+<!--                                             <th></th>
+ -->                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <% for (var i = 0; i < studentdetails.length; i++) { %>
+                                            <tr class="tr-shadow">
+                                            <!-- <td>
+                                            <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                            </label>-->
+                                            
+                                            <td>
+                                            <span class="block-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="15797a677c55706d74786579703b767a78"><%= studentdetails[i].fname %> <%= studentdetails[i].lname %></a></span>
+                                            </td>
+                                            <td>
+                                            <span class="status--denied" id = "<%= studentdetails[i].name %>" name= "status">Not Submitted</span>
+                                            </td>
+                                            
+                                            </tr>
+                                            <tr class="spacer"></tr>
+    <% } %>
+
+                                            </tbody>
+                                            </table>
+                                            </div>
+                                             
+                                            </div>
+                                            </div>
+                                    </div>
+                                </section>
+                                <!-- END STATISTIC-->
+
+                                <!-- STATISTIC CHART-->
+                                <section class="statistic-chart" >
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3 class="title-5 m-b-35">Student Performance Analytics</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row" id = "performance">
+                                            <div class="col-md-6 col-lg-4">
+                                                <!-- CHART-->
+                                                <div class="statistic-chart-1">
+                                                    <h3 class="title-3 m-b-30">Question Overview</h3>
+                                                    <div class="chart-wrap">
+                                                        <canvas id="questionsWidgetChart"></canvas>
+                                                    </div>
+                                                    <div class="statistic-chart-1-note">
+                                                        <span class="big">Questions</span>
+                                                    </div>
+                                                </div>
+                                                <!-- END CHART-->
+                                            </div>
+                                            <div class="col-md-6 col-lg-4">
+                                                <!-- TOP CAMPAIGN-->
+                                                <div class="top-campaign">
+                                                    <h3 class="title-3 m-b-30">Topic Overview</h3>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-top-campaign">
+                                                            <tbody>
+                                                            <% for (var i = 0; i < topicdifficulty.length && i < 5; i++) { %>
+
+                                                                <tr>
+                                                                    <td><%= topicdifficulty[i].topic %></td>
+                                                                    <td><%= topicdifficulty[i].pointsearned %> / <%= topicdifficulty[i].potentialpoints %></td>
+
+                                                            <% } %>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- END TOP CAMPAIGN-->
+                                            </div>
+                                            <div class="col-md-6 col-lg-4">
+                                                <!-- CHART PERCENT-->
+                                                <div class="chart-percent-2">
+                                                    <h3 class="title-3 m-b-30">Assignment Overview</h3>
+                                                    <div class="chart-wrap">
+                                                        <canvas id="correctness-percent-chart"></canvas>
+                                                        <div id="chartjs-tooltip">
+                                                            <table></table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chart-info">
+                                                        <div class="chart-note">
+                                                            <span class="dot dot--green"></span>
+                                                            <span>Correct</span>
+                                                        </div>
+                                                        <div class="chart-note">
+                                                            <span class="dot dot--red"></span>
+                                                            <span>Incorrect</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END CHART PERCENT-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 " id="noanalytics">
+                                                <!-- CHART PERCENT-->
+                                                <div class="chart-percent-2">
+                                                    <h4 >Analytics will become available after the first submission.</h3>
+                                                    
+                                                </div>
+                                                <!-- END CHART PERCENT-->
+                                            </div>
+                                    </div>
+                                </section>
+                                <!-- END STATISTIC CHART-->
+
+                                <!-- COPYRIGHT-->
+                                <section class="p-t-60 p-b-20">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="copyright">
+                                                    <p>Copyright © 2019 GEOBASS. All rights reserved.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- END COPYRIGHT-->
+                            </div>
+
+                        </div>
+
+                         <input type="hidden" name="points" id="points" value='<%=points%>'>
+
+
+                        <% pairs.forEach(function(pairs) { %>
+
+                         <input type="hidden" name="assignmentquestions"  value='<%=pairs.question %>'>
+
+                             <% }); %>
+
+
+                        <% submissions.forEach(function(submissions) { %>
+
+                         <input type="hidden" name="submissionemails" id="<%=submissions._id%>" value='<%=submissions.email%>'>
+                         <input type="hidden" name="pointsearned"  value='<%=submissions.pointsearned%>'>
+<!--                          <input type="hidden" name="individualpoints"  value='<%=pairs.question %>'>
+ -->
+
+
+    <% }); %>
+<% emails.forEach(function(emails) { %>
+
+                         <input type="hidden" name="emails"  value='<%=emails%>'>
+
+    <% }); %>
+                        <!-- Jquery JS-->
+                        <script src="http://159.203.118.48:3000/static/vendor/jquery-3.2.1.min.js"></script>
+                        <!-- Bootstrap JS-->
+                        <script src="http://159.203.118.48:3000/static/vendor/bootstrap-4.1/popper.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+                        <!-- Vendor JS       -->
+                        <script src="http://159.203.118.48:3000/static/vendor/slick/slick.min.js">
+                        </script>
+                        <script src="http://159.203.118.48:3000/static/vendor/wow/wow.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/animsition/animsition.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+                        </script>
+                        <script src="http://159.203.118.48:3000/static/vendor/counter-up/jquery.waypoints.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/counter-up/jquery.counterup.min.js">
+                        </script>
+                        <script src="http://159.203.118.48:3000/static/vendor/circle-progress/circle-progress.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/chartjs/Chart.bundle.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/select2/select2.min.js">
+                        </script>
+                        <script src="http://159.203.118.48:3000/static/vendor/vector-map/jquery.vmap.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/vector-map/jquery.vmap.min.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/vector-map/jquery.vmap.sampledata.js"></script>
+                        <script src="http://159.203.118.48:3000/static/vendor/vector-map/jquery.vmap.world.js"></script>
+
+                        <!-- Main JS-->
+                        <script src="http://159.203.118.48:3000/static/javascripts/main.js"></script>
+                        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+                        <script src = "http://159.203.118.48:3000/static/javascripts/login.js" type="text/javascript"></script>
+<script type="text/javascript">
+     // var submissions = document.getElementById("submissions");
+
+    //  var arrObj = [];
+    // var obj = JSON.stringify(<%=submissions%>, function(key, value) {
+    //  arrObj.push(value);
+    //      })
+
+    //  console.log(arrObj);
+try{
+
+    if(document.getElementsByName("submissionemails").length ===0){
+        document.getElementById("performance").style.display = "none";
+    }
+    else{
+        document.getElementById("noanalytics").style.display = "none";
+    }
+}
+catch (error) {
+    console.log(error);
+  }
+try{
+    var emailsarray = document.getElementsByName("submissionemails");
+    var pointsarray = document.getElementById("points").value;
+        console.log("pointsarray:")
+    console.log(pointsarray);
+    console.log("emails:")
+    console.log(emailsarray);
+        console.log(emailsarray.length);
+
+    for(var i = 0; i < emailsarray.length; i++){
+        var email = document.getElementsByName("submissionemails")[i].value;
+        console.log("EMAIL:")
+        console.log(email);
+        var individualsubmission = document.getElementById(email);
+        
+        individualsubmission.innerHTML = "Submitted";
+        individualsubmission.className = "status--process";
+}
+var points = [];
+
+    for(var i = 0; i < pointsarray.length; i++){
+        if(pointsarray[i] === ','){
+            console.log("testing");
+        }
+        else{
+        points.push(parseInt(pointsarray[i]));}
+    }
+console.log("POINTSarray: " + points)
+
+var assignmentquestions = document.getElementsByName("assignmentquestions");
+
+var bars = [];
+    for(var i = 0; i < assignmentquestions.length; i++){
+        var tooltip = 'Question #' + (i+1) + ":" + " " + assignmentquestions[i].value;
+        bars.push(tooltip);
+}
+
+console.log(assignmentquestions);
+console.log(bars);
+
+}catch (error) {
+    console.log(error);
+  }
+ try {
+    //WidgetChart 5
+    console.log("POINTSarray: " + points)
+
+    var ctx = document.getElementById("questionsWidgetChart");
+    if (ctx) {
+      ctx.height = 220;
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: bars,
+          datasets: [
+            {
+              label: "No. of times answered correctly",
+              data: points,
+              borderColor: "transparent",
+              borderWidth: "0",
+              backgroundColor: "#00ad5f",
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: true,
+          legend: {
+            display: false
+          },
+          scales: {
+            xAxes: [{
+              display: false,
+              categoryPercentage: 1,
+              barPercentage: 0.65
+            }],
+            yAxes: [{
+                ticks: {
+                beginAtZero: true
+            },
+            display: false
+            }
+            ]
+          } 
+        }
+      });
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+try {
+    var pointsearned = document.getElementsByName("pointsearned");
+    
+    var totalpoints = assignmentquestions.length * pointsearned.length;
+
+    var totalpointsearned = 0;
+    for(var i = 0; i < pointsearned.length; i++){
+        totalpointsearned += parseInt(pointsearned[i].value);
+    }
+    console.log("pointsearned:" + totalpointsearned + "out of" +totalpoints );
+
+    //var percentageweight =  Math.floor(100 / totalpoints);
+        var percentageweight =  100 / totalpoints;
+
+
+    console.log("percentageweight: "+ percentageweight);
+
+    pointsearnedpercentage = totalpointsearned * percentageweight;
+
+    console.log(totalpointsearned +"*" + percentageweight);
+
+    var pointslostpercentage = 100 - pointsearnedpercentage;
+
+        console.log(pointslostpercentage);
+
+
+
+    // Percent Chart 2
+    var ctx = document.getElementById("correctness-percent-chart");
+    if (ctx) {
+      ctx.height = 209;
+      var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          datasets: [
+            {
+              label: "My First dataset",
+              data: [pointsearnedpercentage, pointslostpercentage],
+              backgroundColor: [
+                '#00ad5f',
+                '#fa4251'
+              ],
+              hoverBackgroundColor: [
+                '#00ad5f',
+                '#fa4251'
+              ],
+              borderWidth: [
+                0, 0
+              ],
+              hoverBorderColor: [
+                'transparent',
+                'transparent'
+              ]
+            }
+          ],
+          labels: [
+            'Correct %',
+            'Incorrect %'
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          cutoutPercentage: 87,
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          },
+          legend: {
+            display: false,
+            position: 'bottom',
+            labels: {
+              fontSize: 14,
+              fontFamily: "Poppins,sans-serif"
+            }
+
+          },
+          tooltips: {
+            titleFontFamily: "Poppins",
+            xPadding: 15,
+            yPadding: 10,
+            caretPadding: 0,
+            bodyFontSize: 16,
+          }
+        }
+      });
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+
+
+
+</script>
+                    </body>
+
+                    </html>
+<!-- end document-->

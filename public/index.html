@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>SWE II Demo App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>Welcome to the Demo App!</h1>
+  <div>Not much here though... try <button id='add-user-btn'>adding a user!</button></div>
+  <p>Refresh the page after adding some users to see them below.</p>
+  <ul id="users"></ul>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(()=>{
+      $('#add-user-btn').click(()=>{
+        $.ajax({
+          url: '/users/add',
+          method: 'GET',
+          success: data => {
+            console.log(data)
+          }
+        })
+      })
+
+      $.ajax({
+        url: '/users',
+        method: 'GET',
+        success: data =>{
+          console.log(data)
+          for(let i = 0; i < data.length; i++){
+            $('#users').append(`<li> ${data[i].customerName} </li>`)
+          }
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

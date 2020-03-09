@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form action="http://159.203.118.48:3000/test" method="POST">
+     <div id="dynamicInput">
+          Question<br><input type="text" name="questions[]">
+          Answer<br><input type="text" name="answers[]">
+
+     </div>
+     <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+    <button type="submit" value="Submit">submit</button>
+</form>
+</body>
+<script type="text/javascript">
+var counter = 1;
+var limit = 3;
+function addInput(divName){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Question " + (counter + 1) + " <br><input type='text' name='questions[]'>";
+          document.getElementById(divName).appendChild(newdiv);
+          var newdiv2 = document.createElement('div');
+
+          newdiv2.innerHTML = "Answer " + (counter + 1) + " <br><input type='text' name='answers[]'>";
+          document.getElementById(divName).appendChild(newdiv2);
+          counter++;
+     }
+}
+</script>
