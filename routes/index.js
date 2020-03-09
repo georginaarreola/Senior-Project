@@ -1,11 +1,4 @@
-/**
- * File: index.js
- * Author: Jacob Beneski
- * Last Edit Date: 9-18-19
- * Description: Main index router for to / in express.
- */
 
-//Import and initialize Express
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
